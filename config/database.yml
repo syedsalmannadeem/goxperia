@@ -19,7 +19,7 @@ test:
   <<: *default
   database: goxperia_test
 
-secret_key_base: 'Abtach2020'
+secret_key_base: c59e38e0f5eb31a9eb859390de6ae805
 production:
   <<: *default
   database: goxperia_development
