@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>icon_axe-throwing</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage" transform="translate(-943.000000, -836.000000)">
+            <g id="Featured-Listings" transform="translate(148.000000, 631.000000)">
+                <g id="Listing" transform="translate(782.000000, 195.000000)">
+                    <g id="Tags" transform="translate(13.000000, 10.000000)">
+                        <g id="Experience-Type">
+                            <g id="icon_axe-throwing">
+                                <path d="M26,12.9998 C26,20.1798 20.18,25.9998 13,25.9998 C5.82,25.9998 0,20.1798 0,12.9998 C0,5.8198 5.82,-0.0002 13,-0.0002 C20.18,-0.0002 26,5.8198 26,12.9998" id="Fill-1" fill="#F48222"></path>
+                                <polyline id="Fill-4" fill="#FFFFFF" points="9.4785 5.4519 9.4785 21.5019 11.4475 21.5019 11.4475 5.4519"></polyline>
+                                <path d="M12.2524,6.7566 L8.1934,6.7566 L8.1934,12.6446 L12.2524,12.6446 C14.5854,12.6446 16.8494,12.9346 19.0164,13.4726 L19.0164,5.9286 C16.8494,6.4666 14.5854,6.7566 12.2524,6.7566" id="Fill-6" fill="#FFFFFF"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

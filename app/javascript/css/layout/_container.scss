@@ -1,0 +1,37 @@
+/*
+----------------------------------------------------
+CONTAINER
+- Allows centering horizontally
+- Provides responsive Min/Max Widths
+----------------------------------------------------
+*/
+
+
+.container {
+	position: relative;
+	margin: 0 auto;
+	max-width: $section_max-width-lg;
+
+	&.is-full-width {
+		max-width: none;
+		width: 100%;
+	}
+	&.is-fill-height {
+		display: flex;
+	}
+}
+
+
+// RESPONSIVENESS
+//----------------------------------------------------
+@media #{$md} {
+	.container {
+		max-width: $section_max-width-md;
+	}
+}
+@media #{$sm} {
+	.container {
+		width: 100%;
+		max-width: $section_max-width-sm;
+	}
+}

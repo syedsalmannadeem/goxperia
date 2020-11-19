@@ -1,0 +1,26 @@
+%section.index-hero
+  .container
+    %ul.breadcrumbs.is-white
+      %li= link_to 'Home', '/'
+      %li= location_options.key(@state)
+    %h1= location_options.key(@state)
+%section.is-p0.is-fill-height
+  .background.is-gray
+  .container.is-fill-height.is-full-width
+    -# TODO: This 'is-full' class is a bug fix, more elegant solution needed
+    .grid.is-full
+      .grid_col.is-3of12.sm-12of12
+        .background.is-fill
+          = image_tag('sidebar_bg.jpg')
+        .is-p3.sm-p2
+          = simple_form_for :search, url: '/locations', remote: true, method: "GET", html: { id: 'location-filter-form' } do |f|
+            .search-box
+              = image_tag('icons/search-icon.svg', :class => 'search-icon' )
+              = f.input :name, label: false, placeholder: 'Search', input_html: { value: @name }
+              = f.submit 'Search', class: 'search-button'
+            = f.select :state, options_for_select(location_options.to_a, @state), { :include_blank => false }, class: "custom-select custom-select_location custom-select_white is-hide", id: "location-select", name: "state"
+            = f.select :category, options_for_select(category_options.to_a, @category), { :include_blank => 'All Experiences' }, class: "custom-select custom-select_category custom-select_white is-mb0", id: "category-select", name: "category"
+      .grid_col.is-9of12.sm-col-full
+        .cards#location-cards
+          = render '/shared/location_card', locations: @locations
+= javascript_pack_tag 'location_filters/location_filters'

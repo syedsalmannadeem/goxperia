@@ -1,0 +1,6 @@
+%h3 Import locations via CSV
+= simple_form_for @spreadsheet, url: admin_locations_parse_spreadsheet_path do |form|
+  .field
+    = form.file_field :spreadsheet
+  .actions
+    = form.submit 'Import Locations'

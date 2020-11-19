@@ -1,0 +1,44 @@
+
+section.cta {
+  padding: 0;
+
+  h2 {
+    margin-bottom: 4rem;
+
+    span {
+      display: block;
+    }
+  }
+  .cta-image img {
+    margin-top: -6rem;
+    margin-bottom: 6rem;
+    width: 100%;
+    height: 50rem;
+    object-fit: cover;
+    font-family: 'object-fit: cover;';
+    border-radius: 0 8px 8px 0;
+  }
+  .cta-content {
+    padding: 12rem 0 12rem 8rem;
+  }
+}
+
+
+// RESPONSIVENESS
+//----------------------------------------------------
+@media #{$sm} {
+  section.cta {
+    margin-top: 0;
+    padding: 0;
+
+    .cta-image img {
+      margin-top: 0;
+      margin-bottom: 0;
+      height: 22rem;
+      border-radius: 0;
+    }
+    .cta-content {
+      padding: 2rem 2rem 4rem 2rem;
+    }
+  }
+}

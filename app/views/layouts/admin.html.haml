@@ -1,0 +1,29 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
+    %title Goxperia
+    = csrf_meta_tags
+    = csp_meta_tag
+    %link{:href => "/assets/apple-touch-icon.png", :rel => "apple-touch-icon", :sizes => "180x180"}
+    %link{:href => "/assets/favicon-32x32.png", :rel => "icon", :sizes => "32x32", :type => "image/png"}
+    %link{:href => "/assets/favicon-16x16.png", :rel => "icon", :sizes => "16x16", :type => "image/png"}
+    %link{:color => "#5bbad5", :href => "/assets/safari-pinned-tab.svg", :rel => "mask-icon"}
+    %meta{:content => "#0f1a3c", :name => "msapplication-TileColor"}
+    %meta{:content => "#0f1a3c", :name => "theme-color"}
+    = stylesheet_link_tag "https://fonts.googleapis.com/css?family=DM+Sans:400,400i,500,500i,700,700i&display=swap"
+    = stylesheet_pack_tag 'application'
+    = javascript_pack_tag 'application'
+  %body.admin
+    .section-wrap
+      %section.is-min-height-short
+        .background.is-navy
+        .container
+          %nav.admin-nav-bar
+            = link_to image_tag('gox_logo.svg'), "/admin/locations"
+          %nav.utility
+            %p= link_to('logout', destroy_admin_user_session_path, data:{method:"delete"})
+      %section
+        .container.is-admin
+          = yield

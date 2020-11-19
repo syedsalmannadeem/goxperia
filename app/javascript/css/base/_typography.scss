@@ -1,0 +1,468 @@
+/*
+------------------------------------------------------
+TYPOGRAPHY
+Typography requires a baseline shift to align the
+baseline with the grid. Using position relative
+and tweaking top makes this adjustment easy but it
+must happen everytime font or font-size changes.
+
+
+TYPE MODIFIERS
+These modifiers can be applied to body copy and heading
+type elements.
+
+.is-sm
+.is-lg
+
+.is-primary
+.is-secondary
+
+
+LIST MODIFIERS
+
+
+------------------------------------------------------
+*/
+
+
+//----------------------------------------------------
+// SETTINGS
+//----------------------------------------------------
+
+$font-family: 'DM Sans', sans-serif;
+
+// Headings Default
+$h1-color: $navy;
+$h1-size: 5.8rem;
+$h1-lineheight: 6rem;
+$h1-shift: 0rem;
+$h1-margin: 4rem;
+$h1-weight: 300;
+$h1-font-family: $font-family;
+
+$h2-color: $heading-color;
+$h2-size: 4.6rem;
+$h2-lineheight: 5.5rem;
+$h2-shift: .9rem;
+$h2-margin: 2rem;
+$h2-weight: 300;
+$h2-font-family: $font-family;
+
+$h3-color: $navy;
+$h3-size: 1.9rem;
+$h3-lineheight: 2rem;
+$h3-shift: .6rem;
+$h3-margin: 3rem;
+$h3-weight: bold;
+$h3-font-family: $font-family;
+
+$h4-color: $navy;
+$h4-size: 1.5rem;
+$h4-lineheight: 2rem;
+$h4-shift: .6rem;
+$h4-margin: 3rem;
+$h4-weight: bold;
+$h4-font-family: $font-family;
+
+// Headings Small
+$h1-sm-color: $navy;
+$h1-sm-size: 3.5rem;
+$h1-sm-lineheight: 4rem;
+$h1-sm-shift: 0rem;
+$h1-sm-margin: 4rem;
+$h1-sm-weight: 300;
+$h1-sm-font-family: $font-family;
+
+$h2-sm-color: $heading-color;
+$h2-sm-size: 2.8rem;
+$h2-sm-lineheight: 3.6rem;
+$h2-sm-shift: .9rem;
+$h2-sm-margin: 2rem;
+$h2-sm-weight: 300;
+$h2-sm-font-family: $font-family;
+
+$h3-sm-color: $navy;
+$h3-sm-size: 1.5rem;
+$h3-sm-lineheight: 2rem;
+$h3-sm-shift: .6rem;
+$h3-sm-margin: 3rem;
+$h3-sm-weight: bold;
+$h3-sm-font-family: $font-family;
+
+$h4-sm-color: $navy;
+$h4-sm-size: 1.5rem;
+$h4-sm-lineheight: 2rem;
+$h4-sm-shift: .3rem;
+$h4-sm-margin: 3rem;
+$h4-sm-weight: bold;
+$h4-sm-font-family: $font-family;
+
+// Body Copy Default
+$body-size: 1.6rem;
+$body-lineheight: 3rem;
+$body-shift: 9px;
+$body-margin: 3rem;
+$body-weight: normal;
+$body-font-family: $font-family;
+
+// Body Copy Small
+$body-sm-size: 1.6rem;
+$body-sm-lineheight: 2rem;
+$body-sm-shift: .5rem;
+$body-sm-margin: 2rem;
+$body-sm-weight: normal;
+$body-sm-font-family: $font-family;
+
+// Body Copy Large
+$body-lg-size: 2rem;
+$body-lg-lineheight: 4rem;
+$body-lg-shift: .8rem;
+$body-lg-margin: 2rem;
+$body-lg-weight: normal;
+$body-lg-font-family: $font-family;
+
+$ul-indent: 2rem;
+$ol-indent: 2rem;
+
+
+//----------------------------------------------------
+// ALL TYPE ELEMENTS
+//----------------------------------------------------
+h1,h2,h3,h4,p,ul,ol,li,dl,dt,dd, blockquote, address {
+	position: relative;
+	margin: 0;
+}
+
+
+//----------------------------------------------------
+// HEADINGS
+//----------------------------------------------------
+h1 {
+	color: $h1-color;
+	top: $h1-shift;
+	margin-bottom: $h1-margin;
+	line-height: $h1-lineheight;
+	font-size: $h1-size;
+	font-weight: $h1-weight;
+	font-family: $h1-font-family;
+}
+h2 {
+	color: $h2-color;
+	top: $h2-shift;
+	margin-bottom: $h2-margin;
+	line-height: $h2-lineheight;
+	font-size: $h2-size;
+	font-weight: $h2-weight;
+	font-family: $h2-font-family;
+}
+h3 {
+	color: $h3-color;
+	top: $h3-shift;
+	margin-bottom: $h3-margin;
+	line-height: $h3-lineheight;
+	font-size: $h3-size;
+	font-weight: $h3-weight;
+	font-family: $h3-font-family;
+}
+h4 {
+	color: $h4-color;
+	top: $h4-shift;
+	margin-bottom: $h4-margin;
+	line-height: $h4-lineheight;
+	font-size: $h4-size;
+	font-weight: $h4-weight;
+	font-family: $h4-font-family;
+}
+
+@media #{$sm} {
+	h1 {
+		color: $h1-sm-color;
+		top: $h1-sm-shift;
+		margin-bottom: $h1-sm-margin;
+		line-height: $h1-sm-lineheight;
+		font-size: $h1-sm-size;
+		font-weight: $h1-sm-weight;
+		font-family: $h1-sm-font-family;
+	}
+	h2 {
+		color: $h2-sm-color;
+		top: $h2-sm-shift;
+		margin-bottom: $h2-sm-margin;
+		line-height: $h2-sm-lineheight;
+		font-size: $h2-sm-size;
+		font-weight: $h2-sm-weight;
+		font-family: $h2-sm-font-family;
+	}
+	h3 {
+		color: $h3-sm-color;
+		top: $h3-sm-shift;
+		margin-bottom: $h3-sm-margin;
+		line-height: $h3-sm-lineheight;
+		font-size: $h3-sm-size;
+		font-weight: $h3-sm-weight;
+		font-family: $h3-sm-font-family;
+	}
+	h4 {
+		color: $h4-sm-color;
+		top: $h4-sm-shift;
+		margin-bottom: $h4-sm-margin;
+		line-height: $h4-sm-lineheight;
+		font-size: $h4-sm-size;
+		font-weight: $h4-sm-weight;
+		font-family: $h4-sm-font-family;
+	}
+}
+
+//----------------------------------------------------
+// CUSTOM HEADINGS
+//----------------------------------------------------
+h4.is-trailing-rule {
+	display: flex;
+	margin-bottom: 3rem;
+
+	span {
+		margin-right: 2rem;
+	}
+	&:after {
+		content: '';
+		display: block;
+		position: relative;
+		top: 1.3rem;
+		height: 1px;
+		background: $gray-dark;
+		opacity: .5;
+		flex: 1 1 auto;
+	}
+}
+
+
+//----------------------------------------------------
+// BODY COPY
+//----------------------------------------------------
+p,
+li,
+dt,
+dd,
+address
+summary,
+figcaption {
+	color: $text-color;
+	top: $body-shift;
+	margin-bottom: $body-margin;
+	line-height: $body-lineheight;
+	font-size: $body-size;
+	font-weight: $body-weight;
+	font-family: $body-font-family;
+}
+p.is-lg,
+li.is-lg,
+dt.is-lg,
+dd.is-lg,
+address.is-lg
+summary.is-lg,
+figcaption.is-lg {
+	top: $body-lg-shift;
+	margin-bottom: $body-lg-margin;
+	line-height: $body-lg-lineheight;
+	font-size: $body-lg-size;
+	font-weight: $body-lg-weight;
+	font-family: $body-lg-font-family;
+}
+p.is-sm,
+li.is-sm,
+dt.is-sm,
+dd.is-sm,
+address.is-sm
+summary.is-sm,
+figcaption.is-sm {
+	top: $body-sm-shift;
+	margin-bottom: $body-sm-margin;
+	line-height: $body-sm-lineheight;
+	font-size: $body-sm-size;
+	font-weight: $body-sm-weight;
+	font-family: $body-sm-font-family;
+}
+p.is-md,
+li.is-md,
+dt.is-md,
+dd.is-md,
+address.is-md
+summary.is-md,
+figcaption.is-md {
+	top: $body-shift;
+	margin-bottom: $body-margin;
+	line-height: $body-lineheight;
+	font-size: $body-size;
+	font-weight: $body-weight;
+	font-family: $body-font-family;
+}
+
+// RESPONSIVE BODY COPY SIZE
+@media #{$sm} {
+	p.sm-lg,
+	li.sm-lg,
+	dt.sm-lg,
+	dd.sm-lg,
+	address.sm-lg,
+	summary.sm-lg,
+	figcaption.sm-lg {
+		top: $body-lg-shift;
+		margin-bottom: $body-lg-margin;
+		line-height: $body-lg-lineheight;
+		font-size: $body-lg-size;
+		font-weight: $body-lg-weight;
+		font-family: $body-lg-font-family;
+	}
+	p.sm-sm,
+	li.sm-sm,
+	dt.sm-sm,
+	dd.sm-sm,
+	address.sm-sm,
+	summary.sm-sm,
+	figcaption.sm-sm {
+		top: $body-sm-shift;
+		margin-bottom: $body-sm-margin;
+		line-height: $body-sm-lineheight;
+		font-size: $body-sm-size;
+		font-weight: $body-sm-weight;
+		font-family: $body-sm-font-family;
+	}
+	p.sm-md,
+	li.sm-md,
+	dt.sm-md,
+	dd.sm-md,
+	address.sm-md,
+	summary.sm-md,
+	figcaption.sm-md {
+		top: $body-shift;
+		margin-bottom: $body-margin;
+		line-height: $body-lineheight;
+		font-size: $body-size;
+		font-weight: $body-weight;
+		font-family: $body-font-family;
+	}
+}
+
+
+//----------------------------------------------------
+// BLOCKQUOTE
+//----------------------------------------------------
+
+blockquote {
+	color: $text-color;
+	top: $body-shift;
+	margin-bottom: $body-margin;
+	line-height: $body-lineheight;
+	font-size: 2.2rem;
+	font-style: oblique;
+	font-weight: $body-weight;
+	font-family: $body-font-family;
+}
+
+
+//----------------------------------------------------
+// LISTS
+//----------------------------------------------------
+ul {
+	padding: 0 0 0 $ul-indent;
+}
+ol {
+	padding: 0 0 0 $ol-indent;
+}
+
+ul.is-unstyled,
+ol.is-unstyled {
+	list-style: none;
+	padding: 0;
+}
+ul.is-inline,
+ol.is-inline {
+	display: inline;
+	list-style: none;
+	padding: 0;
+
+	li {
+		display: inline;
+	}
+}
+
+
+//----------------------------------------------------
+// ANCHOR
+//----------------------------------------------------
+a {
+	color: $link-color;
+	background-color: transparent;
+	text-decoration: none;
+}
+
+// Improve readability when focused and also mouse hovered in all browsers.
+a:active,
+a:hover {
+  outline: 0;
+}
+
+
+//----------------------------------------------------
+// INLINE STYLES
+// These should only be used inside body copy text
+// elements like <p> and <li>.
+//----------------------------------------------------
+.text-bold, strong, b {
+	font-weight: bold;
+	line-height: 1px; // No line height to avoid disturbing vertical rhythym
+}
+.text-italic, em, dfn {
+	font-style: oblique;
+	line-height: 1px; // No line height to avoid disturbing vertical rhythym
+}
+.text-strike, strike, del {
+	text-decoration: line-through;
+	line-height: 1px; // No line height to avoid disturbing vertical rhythym
+}
+.text-underline {
+	text-decoration: underline;
+	line-height: 1px; // No line height to avoid disturbing vertical rhythym
+}
+
+
+//----------------------------------------------------
+// SUB & SUPER SCRIPT
+// Keep sub and sup from affecting line-height
+//----------------------------------------------------
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+
+
+//----------------------------------------------------
+// MONOSPACE TYPE
+//----------------------------------------------------
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1rem;
+}
+
+
+//----------------------------------------------------
+// RULE
+//----------------------------------------------------
+hr {
+	margin: 3rem 0 2rem 0;
+	height: 0;
+	border: 0;
+	border-bottom: 1px solid $gray;
+}

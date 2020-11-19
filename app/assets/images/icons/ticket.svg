@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="27px" viewBox="0 0 27 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_ex-type</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon_ex-type" transform="translate(13.384776, 13.384776) rotate(-315.000000) translate(-13.384776, -13.384776) translate(0.384776, 0.384776)">
+            <path d="M26,13 C26,20.18 20.18,26 13,26 C5.82,26 0,20.18 0,13 C0,5.82 5.82,0 13,0 C20.18,0 26,5.82 26,13" id="Fill-1" fill="#F48222"></path>
+            <path d="M14.8808,5.5151 C14.8808,6.5541 14.0388,7.3961 12.9998,7.3961 C11.9618,7.3961 11.1188,6.5541 11.1188,5.5151 L8.3328,5.5151 L8.3328,20.4851 L11.1188,20.4851 C11.1188,19.4461 11.9618,18.6041 12.9998,18.6041 C14.0388,18.6041 14.8808,19.4461 14.8808,20.4851 L17.6668,20.4851 L17.6668,5.5151 L14.8808,5.5151 Z" id="Fill-3" fill="#FFFFFF"></path>
+            <polyline id="Fill-5" fill="#F48222" points="13.9277 16.1455 13.9277 9.8545 11.9587 9.8545 11.9587 16.1455"></polyline>
+        </g>
+    </g>
+</svg>

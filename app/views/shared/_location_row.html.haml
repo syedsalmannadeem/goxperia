@@ -1,0 +1,8 @@
+- if locations.length == 0
+  %p.is-ml1 Sorry, no results found.
+- locations.each do |location|
+  %tr
+    %td= link_to location.name, edit_admin_location_path(location)
+    %td #{location.city}, #{location.state}
+    %td
+      = link_to 'Delete', admin_location_path(location), method: :delete, data: { confirm: 'Are you sure?' }

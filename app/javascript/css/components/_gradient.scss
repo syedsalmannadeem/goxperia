@@ -1,0 +1,15 @@
+/*
+----------------------------------------------------
+GRADIENT
+----------------------------------------------------
+*/
+
+.gradient {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(180deg, rgba(6, 23, 64, 0.4) 70%, rgba(6, 23, 64, 1) 100%);
+}

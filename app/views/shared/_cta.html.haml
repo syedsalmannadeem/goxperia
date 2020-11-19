@@ -1,0 +1,14 @@
+%section.cta
+  .background
+    = image_tag('about_bg.png')
+  .grid
+    .col.is-half.sm-full
+      .cta-image
+        = image_tag('about_arcade.jpg')
+    .col.is-half.sm-full
+      .cta-content
+        %h2.is-text-white
+          %span GoXperia Curates
+          %span the Best Experiences
+          %span Near You
+        = link_to 'Learn More', '/about', class: 'button'

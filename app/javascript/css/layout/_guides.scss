@@ -1,0 +1,42 @@
+/*
+------------------------------------------------------
+GUIDES
+Used to check alignment.
+------------------------------------------------------
+*/
+
+// CHECKERBOARD
+// Apply to body element
+//--------------------------------------------------
+.checkerboard:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 1000%;
+	z-index: 10000;
+	pointer-events: none;
+	background-size: 2rem 2rem;
+	background-position: 0 0, 1rem 1rem;
+	background-image: linear-gradient(45deg, rgba(0,0,0,.05) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.05) 75%, rgba(0,0,0,.05)),
+	                  linear-gradient(45deg, rgba(0,0,0,.05) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.05) 75%, rgba(0,0,0,.05));
+}
+
+// BASELINE
+// Apply to body element
+//--------------------------------------------------
+.baseline:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 1000%;
+	z-index: 10000;
+	pointer-events: none;
+	background-size: 100% 1rem;
+	background-image: linear-gradient(rgba(0,0,0,.1) 0, rgba(0,0,0,.1) 1px, transparent 1px, transparent 1rem);
+}

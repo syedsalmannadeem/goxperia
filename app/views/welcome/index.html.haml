@@ -1,0 +1,32 @@
+%section.home-hero
+  .background
+    = image_tag('home_hero_bg.png')
+  .container
+    .home-hero-title
+      %h1
+        %span Find the Best
+        %br
+        %span.is-ml9 Experiences
+    .home-hero-form
+      = simple_form_for :search, url: '/locations', method: 'GET', html: { id: 'welcome-form', novalidate: false } do |f|
+        = f.select :state, options_for_select(location_options.to_a), { :include_blank => 'Select Location' }, required: 'true', class: 'custom-select custom-select_location', id: 'location-select', name: 'state'
+        = f.select :category, options_for_select(category_options.to_a), { :include_blank => 'All Experiences' }, class: 'custom-select custom-select_category', id: 'category-select', name: 'category'
+        = f.submit 'Search', class: 'button is-full'
+    .home-hero-collage.sm-hide
+      = image_tag('home-hero-collage-1@2x.jpg', :class => "home-hero-collage-1")
+      = image_tag('home-hero-collage-2@2x.jpg', :class => "home-hero-collage-2")
+      = image_tag('home-hero-collage-3@2x.jpg', :class => "home-hero-collage-3")
+%section.is-lead
+  .background.home-dots
+    = image_tag('home-dots.svg')
+  .container
+    .is-half.sm-full
+      %p
+        %strong GO XPERIA CURATES EXPERIENCES
+      %p We are a multi-brand experience company offering party bikes, escape rooms, axe throwing and other exciting new experiences.
+%section
+  .container.is-pb4
+    %h3 FEATURED LOCATIONS NATIONWIDE
+    = render '/shared/location_card', { locations: @locations, disable_pagination: true }
+= render '/shared/cta'
+= javascript_pack_tag 'welcome/welcome'

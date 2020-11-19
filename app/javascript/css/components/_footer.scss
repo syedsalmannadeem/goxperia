@@ -1,0 +1,61 @@
+section.footer {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  .background {
+    background: $navy !important;
+  }
+  .logo {
+    margin-bottom: 1.3rem;
+  }
+  h3 {
+    margin: 2rem 0 2rem 0;
+  }
+  h3, p, li, a {
+    color: white;
+  }
+}
+.footer_content {
+  display: flex;
+  width: 100%;
+}
+.footer_branding {
+  width: 35%;
+  padding-right: 2rem;
+}
+.footer_about {
+  width: 45%;
+  padding-right: 12rem;
+}
+.footer_nav {
+  width: 20%;
+  padding-top: 6rem;
+}
+
+// RESPONSIVENESS
+//----------------------------------------------------
+@media #{$sm} {
+  section.footer {
+    padding: 4rem 2rem;
+
+    p {
+      margin-bottom: 2rem;
+      font-size: 1.4rem;
+    }
+    h3 {
+      margin-bottom: 0;
+      font-size: 1.4rem;
+    }
+  }
+  .footer_content {
+    flex-wrap: wrap;
+  }
+  .footer_branding,
+  .footer_about,
+  .footer_nav {
+    padding: 0;
+    width: 100%;
+  }
+  .social-links {
+    margin: 2rem 0 0 0;
+  }
+}

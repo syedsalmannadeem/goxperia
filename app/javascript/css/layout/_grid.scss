@@ -1,0 +1,121 @@
+/*
+----------------------------------------------------
+GRID
+A responsive grid based on inline-block. Nesting is
+not recommended as it will throw off alignment of
+gutters.
+----------------------------------------------------
+
+MARKUP
+<div class="grid">
+	<div class="grid_col"></div>
+	<div class="grid_col"></div>
+</div>
+
+GRID SETTINGS
+Grid settings can be controlled from the scss file.
+
+$grid-columns				The vertical grid columns
+$grid-gutters				The number of gutter variations to generate (rems)
+
+GRID MODIFIERS
+.grid.is-gutterX			Width of gutters (i.e. is-gutter1)
+
+GRID COLUMN MODIFIERS
+.grid_col.is-#of#			Width of column (i.e. is-1of2)
+
+RESPONSIVE MODIFIERS
+Use two letter breakpoint codes (xs,sm,md and lg) instead of "is"
+for responsive versions of the following classes.
+
+.grid.xs-gutter#			Width of gutters (i.e. xs-gutter1)
+.grid_col.xs-#of#			Width of column (i.e. xs-1of2)
+
+----------------------------------------------------
+*/
+
+
+
+// GRID
+//--------------------------------------------------
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+
+// COLUMNS
+//--------------------------------------------------
+.grid_col {
+	position: relative;
+}
+
+
+
+// WIDTHS
+// Grid widths are different than global widths to
+// allow applying style to children. The div in the
+// selector below is used to gain more specificity.
+//----------------------------------------------------
+@mixin generate_widths($prefix: is) {
+	@for $i from 1 through $grid-columns {
+		.grid.#{$prefix}-col-#{$i}of#{$grid-columns} > .grid_col,
+		div.grid > .grid_col.#{$prefix}-col-#{$i}of#{$grid-columns} {
+			width: $i/$grid-columns*100%;
+		}
+	}
+	.grid.#{$prefix}-col-full > .grid_col,
+	div.grid > .grid_col.#{$prefix}-col-full {
+		width: 100%;
+	}
+	.grid.#{$prefix}-col-half > .grid_col,
+	div.grid > .grid_col.#{$prefix}-col-half {
+		width: 50%;
+	}
+	.grid.#{$prefix}-col-third > .grid_col,
+	div.grid > .grid_col.#{$prefix}-col-third {
+		width: 33.3333%;
+	}
+	.grid.#{$prefix}-col-quarter > .grid_col,
+	div.grid > .grid_col.#{$prefix}-col-quarter {
+		width: 25%;
+	}
+	.grid.#{$prefix}-col-fifth > .grid_col,
+	div.grid > .grid_col.#{$prefix}-col-fifth {
+		width: 20%;
+	}
+}
+
+// GENERATE WIDTHS
+@include generate_widths();
+@each $breakpoint-name, $breakpoint-value in $breakpoints {
+	@media #{$breakpoint-value} {
+		@include generate_widths($breakpoint-name);
+	}
+}
+
+
+// GUTTERS
+//----------------------------------------------------
+@mixin generate_gutters($prefix: is) {
+	@for $i from 0 through $grid-gutters {
+		.grid.#{$prefix}-gutter-#{$i} {
+			margin-left: -$i/2+rem;
+			margin-right: -$i/2+rem;
+			margin-bottom: -$i+rem;
+			.grid_col {
+				padding-left: $i/2+rem;
+				padding-right: $i/2+rem;
+				padding-bottom: $i+rem;
+			}
+		}
+	}
+}
+
+// GENERATE GUTTERS
+@include generate_gutters();
+@each $breakpoint-name, $breakpoint-value in $breakpoints {
+	@media #{$breakpoint-value} {
+		@include generate_gutters($breakpoint-name);
+	}
+}

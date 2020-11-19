@@ -1,0 +1,58 @@
+/*
+----------------------------------------------------
+SECTION
+- Defines space for a full width background
+- Provides Min Heights
+- Apply padding to keep contents pushing edge
+- Allows content to center vertically
+----------------------------------------------------
+*/
+
+.section-wrap { /* bugs if these rules exist on body */
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+section {
+	width: 100%;
+  flex: 0 0 auto;
+	position: relative;
+	padding: $section-pt $section-pr $section-pb $section-pl;
+
+	// VARIATIONS
+	&.is-min-height {
+		flex: 0 1 $section_min-height;
+		> .container {
+			min-height: $section_min-height;
+		}
+
+	}
+	&.is-min-height-short {
+		flex: 0 1 $section_min-height-short;
+		padding: 0;
+		> .container {
+			min-height: $section_min-height-short;
+		}
+	}
+	&.is-min-height-tall {
+		flex: 0 1 $section_min-height-tall;
+		> .container {
+			min-height:  $section_min-height-tall;
+		}
+	}
+	&.is-fill-height {
+		flex: 1 0 auto;
+		> .container {
+			min-height: 50rem;
+		}
+    display: flex; // gives element 100% height, carry this down if more stuff is full height
+	}
+}
+
+// RESPONSIVENESS
+//----------------------------------------------------
+@media #{$sm} {
+	section {
+		padding: 1rem;
+	}
+}

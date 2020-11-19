@@ -1,0 +1,88 @@
+//----------------------------------------------------
+// COLORS
+//----------------------------------------------------
+$primary: #3C80F3;
+$secondary: #F48222;
+$navy: #0F1A3C;
+$navy-light: #7a8499;
+$red: rgb(97, 24, 26);
+
+$black: #000000;
+$gray-darkest: #393D41;
+$gray-darker: #596160;
+$gray-dark: #9da5ac;
+$gray: #e5e5e5;
+$gray-light: #eff1f4;
+$gray-lighter: #eff1f4;
+$gray-lightest: #f5f5f5;
+$white: #ffffff;
+
+// TEXT COLORS
+$body-background: #fff;
+$text-color: $black;
+$heading-color: $black;
+$link-color: $primary;
+
+
+//----------------------------------------------------
+// FONT FAMILY
+//----------------------------------------------------
+$font-family: 'DM Sans', sans-serif;
+
+//----------------------------------------------------
+// REM SIZE
+// All sizes in the framework are set in rems so
+// changing these values will scale the UI.
+//----------------------------------------------------
+$rem-size: 10px; // Default
+$xs-rem-size: 10px;
+$sm-rem-size: 10px;
+$md-rem-size: 10px;
+$lg-rem-size: 10px;
+$xl-rem-size: 10px;
+
+
+//----------------------------------------------------
+// GRID (Layout Grid)
+//----------------------------------------------------
+$grid-gutters: 9; // The number of gutter variations to generate (rems)
+$grid-columns: 12; // Number of columns in vertical grid to generate
+$grid-border-color: $gray-light; // Number of columns in vertical grid to generate
+$grid-border-width: 1px; // Number of columns in vertical grid to generate
+
+
+//----------------------------------------------------
+// BREAKPOINTS
+// xs: 0 - $bp-phone-sm (Overrides sm)
+// sm: 0 - $bp-phone
+// md: $bp-phone - $bp-tablet (Only this range)
+// lg: $bp-tablet - infinity
+// xl: $bp-desktop - infinity (overrides lg)
+//----------------------------------------------------
+$bp-phone-sm: 300px; // Max width of the xs class
+$bp-phone: 768px; // Max width of the sm class
+$bp-tablet: 768px; // Max width of md class
+$bp-desktop: 1000px; // Max width of lg class
+
+//----------------------------------------------------
+// SECTIONS
+//----------------------------------------------------
+
+// Min/Max Widths
+$section_min-width-sm: unset;
+$section_max-width-sm: 768px;
+$section_min-width-md: unset;
+$section_max-width-md: unset;
+$section_min-width-lg: 768px;
+$section_max-width-lg: 1144px;
+
+// Min Heights
+$section_min-height: 35rem;
+$section_min-height-short: 8rem;
+$section_min-height-tall: 50rem;
+
+// Default padding
+$section-pt: 4rem;
+$section-pl: 4rem;
+$section-pb: 6rem;
+$section-pr: 4rem;

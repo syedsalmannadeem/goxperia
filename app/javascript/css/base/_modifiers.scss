@@ -1,0 +1,150 @@
+/*
+------------------------------------------------------
+RESPONSIVE MODIFIERS
+Use two letter breakpoint codes (xs,sm,md and lg)
+instead of "is" for responsive versions of the
+following classes.
+------------------------------------------------------
+
+SHOW/HIDE
+.is-show			Give an element display block
+.is-hide			Give an element display none
+
+TEXT ALIGNMENT
+.is-text-left		Align text or contained elements left
+.is-text-right		Align text or contained elements right
+.is-text-center		Align text or contained elements center
+
+MARGINS
+.is-m#
+.is-mh#
+.is-mv#
+.is-mt#
+.is-mr#
+.is-mb#
+.is-ml#
+
+PADDING
+.is-p#
+.is-ph#
+.is-pv#
+.is-pt#
+.is-pr#
+.is-pb#
+.is-pl#
+
+WIDTH
+.is-#of#
+
+OFFSET
+.is-offset-#of#
+
+------------------------------------------------------
+*/
+
+
+$margin-max: 12;
+$padding-max: 12;
+
+
+@mixin generate_modifiers($prefix: is) {
+
+	// TEXT COLOR
+	//----------------------------------------------------
+	.#{$prefix}-text-primary { color: $primary; }
+	.#{$prefix}-text-white { color: $white; }
+
+	// TEXT TRANSFORM
+	//----------------------------------------------------
+	.#{$prefix}-uppercase { text-transform: uppercase; }
+	.#{$prefix}-lowercase { text-transform: lowercase; }
+	.#{$prefix}-capitalize { text-transform: capitalize; }
+
+	// DISPLAY
+	//----------------------------------------------------
+	.#{$prefix}-hide { display: none !important; }
+	.#{$prefix}-show { display: block !important; }
+	.#{$prefix}-block { display: block; }
+	.#{$prefix}-inline-block { display: inline-block; }
+
+	// ALIGNMENT STATES
+	//----------------------------------------------------
+	.#{$prefix}-text-left { text-align: left; }
+	.#{$prefix}-text-right { text-align: right; }
+	.#{$prefix}-text-center	{ text-align: center; }
+	.#{$prefix}-margin-center	{ margin-left: auto; margin-right: auto; }
+
+	// FLOATS
+	//----------------------------------------------------
+	.#{$prefix}-float-left { float: left; }
+	.#{$prefix}-float-right { float: right; }
+	.#{$prefix}-clear { clear: both; }
+
+	// OFFSETS (Based on grid settings)
+	//----------------------------------------------------
+	@for $i from 0 through $grid-columns {
+		.#{$prefix}-offset-#{$i}of#{$grid-columns} {
+			margin-left: $i/$grid-columns*100%;
+		}
+	}
+
+	// WIDTHS (Based on grid settings)
+	//----------------------------------------------------
+	@for $i from 1 through $grid-columns {
+		.#{$prefix}-#{$i}of#{$grid-columns} {
+			width: $i/$grid-columns*100%;
+		}
+	}
+	.#{$prefix}-full {
+		width: 100%;
+	}
+	.#{$prefix}-half {
+		width: 50%;
+	}
+	.#{$prefix}-third {
+		width: 33.3333%;
+	}
+	.#{$prefix}-quarter {
+		width: 25%;
+	}
+	.#{$prefix}-fifth {
+		width: 20%;
+	}
+
+	// MARGIN
+	//----------------------------------------------------
+	@for $i from 0 through $margin-max {
+		.#{$prefix}-m#{$i} { margin: #{$i}rem !important; }
+		.#{$prefix}-mh#{$i} { margin-left: #{$i}rem !important; margin-right: #{$i}rem !important; }
+		.#{$prefix}-mv#{$i} { margin-top: #{$i}rem !important; margin-bottom: #{$i}rem !important; }
+		.#{$prefix}-mt#{$i} { margin-top: #{$i}rem !important; }
+		.#{$prefix}-mr#{$i} { margin-right: #{$i}rem !important; }
+		.#{$prefix}-mb#{$i} { margin-bottom: #{$i}rem !important; }
+		.#{$prefix}-ml#{$i} { margin-left: #{$i}rem !important; }
+	}
+
+	// PADDING
+	//----------------------------------------------------
+	@for $i from 0 through $padding-max {
+		.#{$prefix}-p#{$i} { padding: #{$i}rem !important; }
+		.#{$prefix}-ph#{$i} { padding-left: #{$i}rem !important; padding-right: #{$i}rem !important; }
+		.#{$prefix}-pv#{$i} { padding-top: #{$i}rem !important; padding-bottom: #{$i}rem !important; }
+		.#{$prefix}-pt#{$i} { padding-top: #{$i}rem !important; }
+		.#{$prefix}-pr#{$i} { padding-right: #{$i}rem !important; }
+		.#{$prefix}-pb#{$i} { padding-bottom: #{$i}rem !important; }
+		.#{$prefix}-pl#{$i} { padding-left: #{$i}rem !important; }
+	}
+
+}
+
+
+// GENERATE
+//----------------------------------------------------
+@include generate_modifiers();
+@each $breakpoint-name, $breakpoint-value in $breakpoints {
+	@media #{$breakpoint-value} {
+		@include generate_modifiers($breakpoint-name);
+	}
+}
+
+

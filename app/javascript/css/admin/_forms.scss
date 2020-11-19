@@ -1,0 +1,125 @@
+.field {
+  float: left;
+  width: 100%;
+  padding: 0 1rem;
+
+  &.is-half {
+    width: 50%;
+  }
+  &.is-third {
+    width: 33%;
+  }
+  &.is-quarter {
+    width: 25%;
+  }
+
+  &.is-highlight {
+    border: 1px solid $gray;
+    background: $gray-light;
+    border-radius: 4px;
+    padding: 1.5rem 1.5rem .5rem 1.5rem;
+    margin: 0 1rem;
+  }
+}
+.actions {
+  width: 100%;
+  clear: both;
+  padding-top: 1rem;
+}
+label {
+  display: block;
+  font-weight: 900;
+  color: $gray-darker;
+  text-transform: capitalize;
+  margin: 0 0 1rem 0;
+  font-size: 1.3rem;
+  font-family: $font-family;
+
+  &.inline {
+    display: inline-block;
+  }
+}
+textarea,
+select,
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=number] {
+  position: relative;
+  border-radius: 2px;
+  border: 1px solid $gray-dark;
+  height: 3.5rem;
+  width: 100%;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  font-family: $font-family;
+}
+textarea {
+  height: 12rem;
+  padding: 1rem;
+}
+input[type=checkbox] {
+  position: relative;
+  float: left;
+  top: 1px;
+  width: 2rem;
+  height: 2rem;
+  margin-right: .5rem;
+}
+input[type=file] {
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+  font-family: $font-family;
+}
+.button,
+input[type=submit] {
+  position: relative;
+  display: inline-block;
+  color: white;
+  background: $primary;
+  margin: 2rem 0 0 1rem;
+  padding: .75rem 2rem;
+  min-height: 3.5rem;
+  line-height: 2rem;
+  border-radius: 3px;
+  border: none;
+  font-weight: bold;
+  font-size: 1.3rem;
+  font-family: $font-family;
+  cursor: pointer;
+  white-space: normal;
+}
+.button.is-white {
+  color: $primary;
+  background: white;
+}
+.field_with_errors {
+  input {
+    border: 1px solid red;
+  }
+  label {
+    color: red;
+  }
+}
+#error_explanation {
+  background: pink;
+  margin: 0 1rem 3rem 1rem;
+  padding: 0 2rem 2rem 2rem;
+  border: 1px solid red;
+  border-radius: 4px;
+
+  h2 {
+    display: none;
+  }
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+hr {
+  margin: 0 1rem  2rem 1rem;
+}
+.container.is-admin {
+  max-width: 70rem;
+}

@@ -1,0 +1,47 @@
+.pagination-wrap {
+  margin: 2rem 0;
+  text-align: center;
+  font-size: 0;
+}
+.pagination {
+  display: inline-block;
+  background: $gray-lighter;
+  border-radius: 1.5rem;
+  padding: 0 1.5rem;
+
+  span {
+    display: inline-block;
+    color: black;
+    line-height: 3rem;
+    height: 3rem;
+    padding: 0 1rem;
+    min-width: 1rem;
+    font-weight: 700;
+    font-size: 1.6rem;
+    font-family: $font-family;
+  }
+  .first,
+  .last {
+    display: none;
+  }
+  a {
+    color: black;
+  }
+  .page {
+    a {
+      color: $navy-light;
+      font-weight: 400;
+      display: inline-block;
+    }
+  }
+  .next {
+    padding-left: 2rem;
+    margin-left: 1rem;
+    border-left: 3px solid white;
+  }
+  .prev {
+    padding-right: 2rem;
+    margin-right: 1rem;
+    border-right: 3px solid white;
+  }
+}

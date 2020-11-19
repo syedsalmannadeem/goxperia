@@ -1,0 +1,49 @@
+%section.show-hero
+  .background.is-black
+    - if  @location.cover_image.attached?
+      = image_tag @location.cover_image.service_url
+  .gradient
+  .container
+    %ul.breadcrumbs
+      %li= link_to 'Home', '/'
+      %li= link_to location_options.key(@location.state), controller: "locations", state: @location.state, category: @location.category
+      %li= @location.name
+    %h1= @location.name
+%section
+  .container.sm-pb3
+    .grid.is-gutter-6.sm-gutter-0
+      .grid_col.is-col-2of12.sm-hide
+      .grid_col.is-col-7of12.sm-col-full
+        %h4.sm-hide ABOUT
+        %hr.sm-hide
+        %p= @location.description
+        = link_to @location.website, class: 'button is-mt1 sm-mb2 trailing-icon', target: '_blank' do
+          Visit the Website
+          = image_tag 'icons/arrow-simple-white.svg'
+      .grid_col.is-col-3of12.sm-col-full
+        %h4.sm-hide CONTACT
+        %hr.sm-hide
+        %p
+          %strong= @location.name
+          %br
+          %span= @location.address
+          %br
+          %span #{@location.city}, #{@location.state} #{@location.zip}
+        %ul.icon-list
+          %li
+            - location_link = 'https://www.google.com/maps/search/?api=1&query='+@location.name+' '+@location.address+' '+@location.city+' '+@location.state
+            = link_to location_link, target: '_blank' do
+              = image_tag 'icons/info-location.svg'
+              %strong Get Directions
+          %li
+            = link_to 'tel:'+@location.phone, target: '_blank' do
+              = image_tag 'icons/info-phone.svg'
+              %strong= @location.phone
+%section
+  .background
+    = image_tag 'gray_swoops_bg.jpg'
+  .container.is-pb4
+    %h4.is-trailing-rule
+      %span YOU MIGHT ALSO LIKE...
+    = render '/shared/location_card', { locations: @related_locations, disable_pagination: true }
+= render '/shared/cta'

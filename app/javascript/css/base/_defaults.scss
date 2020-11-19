@@ -1,0 +1,163 @@
+/*
+------------------------------------------------------
+DEFAULTS
+Setup some reasonable defaults
+------------------------------------------------------
+*/
+
+
+//----------------------------------------------------
+// BORDER-BOX FOR EVERYTHING
+//----------------------------------------------------
+*, *:after, *:before {
+	box-sizing: border-box;
+}
+
+
+//----------------------------------------------------
+// HTML & BODY
+//----------------------------------------------------
+html {
+	position: relative;
+	height: 100%;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	color: $text-color;
+	background: $body-background;
+	margin: 0;
+	height: 100%;
+	overflow-x: hidden;
+}
+main {
+	flex: 1;
+}
+footer {
+	.grid,
+	.grid_col {
+		margin-bottom: 0 !important;
+		padding-bottom: 0 !important;
+	}
+}
+
+//----------------------------------------------------
+// BREAKPOINTS
+//----------------------------------------------------
+$breakpoints: (
+	sm: "screen and (max-width: "$bp-phone")",
+	md: "screen and (min-width: "$bp-phone") and (max-width: "$bp-tablet")",
+	lg: "screen and (min-width: "$bp-tablet")",
+	xs: "screen and (max-width: "$bp-phone-sm")",
+	xl: "screen and (min-width: "$bp-desktop")",
+);
+$xs: map-get($breakpoints, xs);
+$sm: map-get($breakpoints, sm);
+$md: map-get($breakpoints, md);
+$lg: map-get($breakpoints, lg);
+$xl: map-get($breakpoints, xl);
+
+
+//----------------------------------------------------
+// RESPONSIVE GRID SIZE
+//----------------------------------------------------
+// The keys in this map must match above breakpoints map
+$rem-sizes: (
+	sm: $sm-rem-size,
+	md: $md-rem-size,
+	lg: $lg-rem-size,
+	xs: $xs-rem-size,
+	xl: $xl-rem-size,
+);
+@each $breakpoint-name, $breakpoint-value in $breakpoints {
+	@media #{$breakpoint-value} {
+		html { font-size: map-get($rem-sizes, $breakpoint-name); }
+	}
+}
+
+
+//----------------------------------------------------
+// HTML 5 DISPLAY DEFINITIONS
+//----------------------------------------------------
+
+// Correct 'block' display not defined for 'details' or 'summary' in IE 10/11 and Firefox
+// Correct 'block' display not defined for 'main' in IE 11
+details,
+main,
+summary {
+	display: block;
+}
+
+// Normalize vertical alignment of 'progress' in Chrome, Firefox, and Opera
+progress {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+// Prevent modern browsers from displaying 'audio' without controls
+audio:not([controls]) {
+	display: none;
+}
+
+// Hide the 'template' element in IE 8/9/11, Safari, and Firefox < 22
+template {
+	display: none;
+}
+
+
+
+
+//----------------------------------------------------
+// FORMS
+//----------------------------------------------------
+button,
+input,
+optgroup,
+select,
+textarea {
+	color: inherit; // Correct color not being inherited.
+	font: inherit; // Correct font properties not being inherited.
+	margin: 0; // Address margins set differently in Firefox 4+, Safari, and Chrome.
+}
+button {
+	overflow: visible; // Address 'overflow' set to 'hidden' in IE 8/9/10/11
+}
+button,
+select {
+	text-transform: none; // ddress inconsistent 'text-transform' inheritance for 'button' and 'select'
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: button; // Correct inability to style clickable 'input' types in iOS.
+	cursor: pointer; // Improve consistency of cursor style
+}
+button[disabled],
+html input[disabled] {
+	cursor: default; // Re-set default cursor for disabled elements.
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0; // Remove inner padding and border in Firefox 4+
+	padding: 0;
+}
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+input[type="search"] {
+	-webkit-appearance: textfield;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}

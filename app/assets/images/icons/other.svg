@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>icon_other</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage" transform="translate(-161.000000, -1541.000000)">
+            <g id="Featured-Listings" transform="translate(148.000000, 631.000000)">
+                <g id="Listing" transform="translate(0.000000, 899.000000)">
+                    <g id="Tags" transform="translate(13.000000, 11.000000)">
+                        <g id="Experience-Type">
+                            <g id="icon_other">
+                                <path d="M25.9998,13 C25.9998,20.18 20.1798,26 12.9998,26 C5.8198,26 -0.0002,20.18 -0.0002,13 C-0.0002,5.82 5.8198,0 12.9998,0 C20.1798,0 25.9998,5.82 25.9998,13" id="Fill-1" fill="#F48222"></path>
+                                <path d="M9.5267,13 C9.5267,13.973 8.7377,14.761 7.7657,14.761 C6.7937,14.761 6.0047,13.973 6.0047,13 C6.0047,12.027 6.7937,11.239 7.7657,11.239 C8.7377,11.239 9.5267,12.027 9.5267,13" id="Fill-4" fill="#FFFFFF"></path>
+                                <path d="M14.761,13 C14.761,13.973 13.972,14.761 13,14.761 C12.028,14.761 11.239,13.973 11.239,13 C11.239,12.027 12.028,11.239 13,11.239 C13.972,11.239 14.761,12.027 14.761,13" id="Fill-6" fill="#FFFFFF"></path>
+                                <path d="M19.9954,13 C19.9954,13.973 19.2064,14.761 18.2344,14.761 C17.2614,14.761 16.4734,13.973 16.4734,13 C16.4734,12.027 17.2614,11.239 18.2344,11.239 C19.2064,11.239 19.9954,12.027 19.9954,13" id="Fill-8" fill="#FFFFFF"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

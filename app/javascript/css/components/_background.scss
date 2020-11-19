@@ -1,0 +1,51 @@
+/*
+----------------------------------------------------
+BACKGROUND
+----------------------------------------------------
+*/
+
+.background {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: $gray-lightest;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		font-family: ' object-fit: cover; object-position: center;';
+	}
+
+	&.is-top-align {
+		object-position: center top;
+	}
+	&.is-fill img {
+		object-fit: fill;
+	}
+	&.is-gray {
+		background: $gray-light;
+	}
+	&.is-black {
+		background: black;
+	}
+	&.is-navy {
+		background: $navy;
+	}
+	&.home-dots {
+		background: white;
+
+		img {
+			position: absolute;
+			top: 13rem;
+			right: 0;
+			object-fit: none;
+			width: auto;
+			height: auto;
+		}
+	}
+}

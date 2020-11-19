@@ -1,0 +1,62 @@
+%section.basic-hero
+  .background.is-black
+    = image_tag('about-group.jpg')
+  .gradient
+  .container
+    %h1 About Us
+%section
+  .container.is-ph8.sm-ph0
+    .grid
+      .grid_col.is-2of12.sm-hide
+      .grid_col.is-8of12.sm-full
+        %h2 Our vision is to be the go-to provider and global ambassador of immersive, sharable experiences that unite and ignite like minded consumers.
+        %hr
+        %p Our vision is to be the singular destination for all immersive, sharable, location based experiences that entertain and inspire.
+        %hr
+        %p We pride ourselves in our core values as an organization.
+        .icon-row
+          .icon-row-item
+            = image_tag('icons/honesty.svg')
+            %p Honesty
+          .icon-row-item
+            = image_tag('icons/safety.svg')
+            %p Safety
+          .icon-row-item
+            = image_tag('icons/value.svg')
+            %p Value
+          .icon-row-item
+            = image_tag('icons/fun.svg')
+            %p Fun
+          .icon-row-item
+            = image_tag('icons/integrity.svg')
+            %p Integrity
+
+%section.is-pb12.sm-pb4
+  .background
+    = image_tag 'gray_swoops_split_bg.jpg'
+  .container.sm-ph0
+    .grid
+      .grid_col.is-6of12.sm-full.is-pr3
+        %h2 Interested in Selling your Experience Business?
+        %p.sm-mh0 Drop us a line!
+        = link_to("Contact Us", "mailto:hello@goxperia.com", class: "button")
+      .grid_col.is-6of12.sm-full.is-pl3
+        %h2 Interested in joining our free affliliate program?
+        %p We’d love to talk to you.
+        = link_to("Contact Us", "mailto:affiliates@goxperia.com", class: "button")
+%section.cta
+  .background
+    = image_tag('about_bg.png')
+  .grid
+    .col.is-half.sm-full
+      .cta-image
+        = image_tag('about-peddle-pub.jpg')
+    .col.is-half.sm-full
+      .cta-content
+        %h2.is-text-white
+          %span Search for the
+          %span Best Experiences
+          %span Near You
+        = link_to 'Search Experiences', '/', class: 'button'
+
+

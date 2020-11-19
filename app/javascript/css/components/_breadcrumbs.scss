@@ -1,0 +1,36 @@
+.breadcrumbs {
+  position: absolute;
+  bottom: 4rem;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    color: white;
+    line-height: 1rem;
+    float: left;
+    padding: 0 1rem;
+    margin: 0;
+    border-left: 1px solid white;
+    font-size: 1.3rem;
+
+    &:first-child {
+      padding-left: 0;
+      border: none;
+    }
+  }
+  a {
+    color: white;
+    font-weight: 700;
+  }
+}
+
+// RESPONSIVENESS
+//----------------------------------------------------
+@media #{$sm} {
+	.breadcrumbs {
+    bottom: 3rem;
+    left: 2rem;
+  }
+}

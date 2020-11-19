@@ -1,0 +1,63 @@
+header {
+  h1, p, a {
+    color: white;
+  }
+}
+.admin-nav-bar {
+  position: relative;
+  padding: 2rem 4rem;
+}
+.admin-nav-bar a {
+  border-left: 1px solid white;
+  padding: 0 1rem;
+
+  &:first-child {
+    padding-left: 0;
+    border-left: none;
+  }
+}
+
+h3 {
+  color: $gray-dark;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+h2 {
+  color: $gray-darkest;
+  font-size: 3rem;
+  line-height: 4rem;
+  margin-left: 1rem;
+  margin-bottom: 3rem;
+}
+.notice,
+.alert {
+  position: absolute;
+  left: 50%;
+  top: 1rem;
+  transform: translateX(-50%);
+}
+.utility {
+  position: absolute;
+  top: 2rem;
+  right: 4rem;
+
+  p {
+    top: 0;
+    margin: 0;
+    line-height: 2rem;
+  }
+}
+
+
+
+// RESPONSIVENESS
+//----------------------------------------------------
+@media #{$sm} {
+	.admin-nav-bar {
+    padding: 2rem;
+  }
+  .utility {
+    right: 2rem;
+  }
+}

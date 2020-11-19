@@ -1,0 +1,6 @@
+function replaceLocations (innerHTML) {
+  const locations = document.getElementById('location-list');
+  locations.innerHTML = innerHTML;
+}
+
+replaceLocations("<%= j render 'shared/location_row', locations: @locations %>");

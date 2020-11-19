@@ -1,0 +1,41 @@
+.header {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  padding: 0 $section-pr 0 $section-pl;
+  width: 100%;
+  flex: 1 1 4rem;
+
+  .container {
+    padding: 0;
+  }
+
+  .logo {
+    margin-top: 3rem;
+  }
+  .logo img {
+    height: 5rem;
+  }
+}
+
+.notice,
+.alert {
+  position: absolute;
+}
+
+
+// RESPONSIVENESS
+//----------------------------------------------------
+@media #{$sm} {
+	.header {
+    padding: 0 2rem;
+
+    .logo {
+      margin-top: 2rem;
+
+      img {
+        height: 4.2rem;
+      }
+    }
+  }
+}

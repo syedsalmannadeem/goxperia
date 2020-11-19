@@ -1,0 +1,29 @@
+.section
+  .container
+    %h2.is-inline-block.is-mt1 Locations
+    = link_to 'New Location', new_admin_location_path, class: 'button is-float-right is-mr1'
+    %hr
+.section
+  .container
+    = simple_form_for :search, url: 'admin/locations', remote: true, method: "GET", html: { id: 'location-filter-form' } do |f|
+      = f.select :state, options_for_select(location_options.to_a, @state), { :include_blank => 'All Locations' }, class: "", id: "location-select", name: "state"
+      = f.select :category, options_for_select(category_options.to_a, @category), { :include_blank => 'All Experiences' }, class: "", id: "category-select", name: "category"
+      = f.input :name, label: false, placeholder: 'Search', input_html: { value: @name }
+      = f.submit 'Search', class: 'search-button'
+.section
+  .container
+    %table.is-full
+      %thead
+        %tr
+          %th Name
+          %th Location
+          %th
+      %tbody#location-list
+        - @locations.each do |location|
+          %tr
+            %td= link_to location.name, edit_admin_location_path(location)
+            %td #{location.city}, #{location.state}
+            %td
+              = link_to 'Delete', admin_location_path(location), method: :delete, data: { confirm: 'Are you sure?' }
+    %hr.is-mt2
+= javascript_pack_tag 'location_filters/location_filters'

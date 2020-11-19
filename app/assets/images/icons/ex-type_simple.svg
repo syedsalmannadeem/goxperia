@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>icon_ex-type_simple</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Results_Mobile" transform="translate(-23.000000, -393.000000)" fill="#061740">
+            <g id="Left-Filters" transform="translate(0.000000, 299.000000)">
+                <g id="Location" transform="translate(22.000000, 94.000000)">
+                    <g id="Category-DD">
+                        <g id="category-type">
+                            <g id="icon_ex-type_simple" transform="translate(12.646447, 12.146447) rotate(-315.000000) translate(-12.646447, -12.146447) translate(6.146447, 1.646447)">
+                                <path d="M8.93589113,0.370028139 L12.658002,0.370028139 L12.658002,20.3700281 L8.93589113,20.3700281 C8.93589113,18.9819186 7.81097463,17.8570021 6.42286508,17.8570021 C5.03609153,17.8570021 3.90983903,18.9819186 3.90983903,20.3700281 L0.187728139,20.3700281 L0.187728139,0.370028139 L3.90983903,0.370028139 C3.90983903,1.75813769 5.03609153,2.88305419 6.42286508,2.88305419 C7.81097463,2.88305419 8.93589113,1.75813769 8.93589113,0.370028139 Z M7.66254444,14.5722993 L7.66254444,6.16748973 L5.03194992,6.16748973 L5.03194992,14.5722993 L7.66254444,14.5722993 Z" id="Combined-Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

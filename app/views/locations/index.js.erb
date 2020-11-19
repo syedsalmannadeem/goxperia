@@ -1,0 +1,6 @@
+function replaceLocations (innerHTML) {
+  const locations = document.getElementById('location-cards');
+  locations.innerHTML = innerHTML;
+}
+
+replaceLocations("<%= j render 'shared/location_card', locations: @locations %>");

@@ -1,0 +1,56 @@
+= form_with(model: [:admin, @location], local: true) do |form|
+  - if @location.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@location.errors.count, "error")
+        prohibited this location from being saved:
+      %ul
+        - @location.errors.full_messages.each do |message|
+          %li= message
+  .field.is-half
+    = form.label :name
+    = form.text_field :name
+  .field.is-half
+    = form.label :company_name
+    = form.text_field :company_name
+  .field
+    = form.label :category
+    = form.select :category, options_for_select(category_options, @location.category)
+  .field
+    = form.label :address
+    = form.text_field :address
+  .field.is-half
+    = form.label :city
+    = form.text_field :city
+  .field.is-quarter
+    = form.label :state
+    = form.select :state, options_for_select(location_options, @location.state), { :include_blank => '' }, required: 'true'
+  .field.is-quarter
+    = form.label :zip
+    = form.number_field :zip
+  .field.is-half
+    = form.label :phone
+    = form.text_field :phone
+  .field.is-half
+    = form.label :email
+    = form.text_field :email
+  .field
+    = form.label :website
+    = form.text_field :website
+  .field
+    = form.label :description
+    = form.text_area :description
+  .field
+    = form.label :cover_image
+    = form.file_field :cover_image
+  .field.is-highlight.is-half
+    = form.check_box :featured
+    = form.label :featured, 'Homepage Feature'
+  .field.is-highlight.is-half.is-mt3
+    = form.check_box :preferred
+    = form.label :preferred, 'Preferred Listing'
+  %hr
+  .actions
+    = form.submit
+    - if @location.id
+      = link_to 'View Location', location_path(@location), target: '_blank', class: 'button is-white'

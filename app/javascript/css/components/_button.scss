@@ -1,0 +1,251 @@
+/*
+----------------------------------------------------
+BUTTON
+----------------------------------------------------
+
+MARKUP
+<a class="button"></a>
+
+SIZE
+.button.is-sm			Small button
+.button.is-lg			Large button
+
+COLOR
+.button.is-primary
+.button.is-secondary
+.button.is-gray
+.button.is-white
+
+STYLE
+.button.is-round
+.button.is-outline
+.button.is-text
+
+ISSUES
+- When mixing anchor and button/submit button types
+  the baseline grid can get pushed off by 1 pixel.
+
+
+----------------------------------------------------
+*/
+
+
+// SETTINGS
+//--------------------------------------------------
+$button_hover-zoom: 1; // Set to 1 for no zoom animation on hover
+
+$button_border-width: 0;
+$button_border-radius: 2.5rem;
+
+$button_height: 5rem;
+$button_min-width: 10rem;
+$button_font-size: 1.6rem;
+
+$button_height-lg: 4rem;
+$button_min-width-lg: 14rem;
+$button_font-size-lg: 1.6rem;
+
+$button_height-sm: 3rem;
+$button_min-width-sm: 6rem;
+$button_font-size-sm: 1.3rem;
+
+
+// BUTTON
+//--------------------------------------------------
+.button {
+	position: relative;
+	display: inline-block;
+	color: white;
+	background: $primary;
+	margin-right: .5rem;
+	padding: 1.5rem 2.5rem;
+	border: 0;
+	border-radius: $button_border-radius;
+	line-height: 2rem;
+	height: $button_height + rem;
+	text-align: center;
+	font-family: $font-family;
+	font-size: $button_font-size;
+	font-weight: 700;
+	white-space: nowrap;
+	cursor: pointer;
+	user-select: none;
+	transition: background .3s, color .3s, transform .3s;
+	outline: none;
+}
+
+
+// VARIATIONS
+//--------------------------------------------------
+.button {
+
+	// TRAILING ICONS
+	&.trailing-icon img {
+		top: 3px;
+    position: relative;
+    margin-left: 1rem;
+	}
+
+	// SIZE
+	&.is-lg {
+		padding: ($button_height-lg - 1) / 2;
+		height: $button_height-lg;
+		font-size: $button_font-size-lg;
+	}
+
+	&.is-sm {
+		padding: ($button_height-sm - 2) / 2;
+		height: $button_height-sm;
+		font-size: $button_font-size-sm;
+	}
+
+	&.is-min-width {
+		min-width: $button_min-width;
+
+		&.is-lg {
+			min-width: $button_min-width-lg;
+		}
+		&.is-sm {
+			min-width: $button_min-width-sm;
+		}
+	}
+
+	// COLOR
+	&.is-secondary {
+		color: white;
+		background: $secondary;
+	}
+	&.is-gray {
+		color: white;
+		background: $gray;
+	}
+	&.is-white {
+		color: $black;
+		background: $white;
+	}
+
+	// STYLE
+	&.is-round {
+		border-radius: $button_height / 2;
+
+		&.is-lg {
+			border-radius: $button_height-lg / 2;
+		}
+
+		&.is-sm {
+			border-radius: $button_height-sm / 2;
+		}
+	}
+
+	&.is-circle,
+	&.is-square {
+		width: $button_height;
+		padding-left: 0;
+		padding-right: 0;
+
+		&.is-lg {
+			width: $button_height-lg;
+		}
+
+		&.is-sm {
+			width: $button_height-sm;
+		}
+	}
+
+	&.is-circle {
+		border-radius: 50%;
+	}
+
+	&.is-outline {
+		color: $primary;
+		background: transparent;
+		box-shadow: 0 0 0 $button_border-width $white inset; // Using Box Shadow for border to avoid messing with text alignment
+
+		&.is-secondary {
+			color: $secondary;
+			box-shadow: 0 0 0 $button_border-width $white inset;
+		}
+
+		&.is-gray {
+			color: $gray;
+			box-shadow: 0 0 0 $button_border-width $white inset;
+		}
+
+		&.is-white {
+			color: $white;
+			background: transparent;
+			box-shadow: 0 0 0 $button_border-width $white inset;
+		}
+	}
+
+	&.is-text {
+		color: $primary;
+		background: transparent;
+
+		&.is-secondary {
+			color: $secondary;
+		}
+
+		&.is-gray {
+			color: $gray;
+		}
+
+		&.is-white {
+			color: $white;
+		}
+	}
+
+	// STATES
+	&:hover {
+		background: darken($primary, 10%);
+		transform: scale($button_hover-zoom);
+
+		&.is-secondary {
+			background: darken($secondary, 10%);
+		}
+
+		&.is-gray {
+			background: darken($gray, 10%);
+		}
+
+		&.is-white {
+			background: darken($white, 10%);
+		}
+
+		&.is-outline {
+			color: $primary;
+			background: white;
+			box-shadow: none;
+
+			&.is-secondary {
+				background: $gray-light;
+			}
+
+			&.is-gray {
+				background: $white;
+			}
+
+			&.is-white {
+				color: $gray;
+				background: $white;
+			}
+		}
+
+		&.is-text {
+			background: transparent;
+			color: darken($primary, 10%);
+
+			&.is-secondary {
+				color: darken($secondary, 10%);
+			}
+
+			&.is-gray {
+				color: darken($gray, 10%);
+			}
+
+			&.is-white {
+				color: darken($white, 10%);
+			}
+		}
+	}
+}

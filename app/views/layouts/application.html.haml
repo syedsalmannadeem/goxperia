@@ -1,0 +1,63 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
+    %title Goxperia
+    = csrf_meta_tags
+    = csp_meta_tag
+    %link{:href => "/assets/apple-touch-icon.png", :rel => "apple-touch-icon", :sizes => "180x180"}
+    %link{:href => "/assets/favicon-32x32.png", :rel => "icon", :sizes => "32x32", :type => "image/png"}
+    %link{:href => "/assets/favicon-16x16.png", :rel => "icon", :sizes => "16x16", :type => "image/png"}
+    %link{:color => "#5bbad5", :href => "/assets/safari-pinned-tab.svg", :rel => "mask-icon"}
+    %meta{:content => "#0f1a3c", :name => "msapplication-TileColor"}
+    %meta{:content => "#0f1a3c", :name => "theme-color"}
+    = stylesheet_link_tag "https://fonts.googleapis.com/css?family=DM+Sans:400,400i,500,500i,700,700i&display=swap"
+    = stylesheet_pack_tag 'application'
+    = javascript_pack_tag 'application'
+    / Global site tag (gtag.js) - Google Analytics
+    %script{:async => "", :src => "https://www.googletagmanager.com/gtag/js?id=UA-170111878-1"}
+    :javascript
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-170111878-1');
+  %body
+    .section-wrap
+      %section.header
+        .container
+          .logo
+            = link_to image_tag('gox_logo.svg'), "/"
+      = yield
+      %section.footer
+        .background
+        .container
+          .footer_content
+            .footer_branding
+              .logo
+                = link_to image_tag('gox_logo.svg'), "/"
+              %p The future of experience-based entertainment.
+              %p.sm-mb1
+                %strong.is-mr1 General Inquiries
+                = link_to 'hello@goxperia.com', 'mailto:hello@goxperia.com'
+                %br
+                %strong.is-mr1 Affiliate Program
+                = link_to 'affiliates@goxperia.com', 'mailto:affiliates@goxperia.com'
+            .footer_about
+              %h3 About Us
+              %p
+                Our vision is to be the go-to provider and global ambassador of immersive, sharable experiences that unite and ignite like minded consumers.
+                = link_to 'Learn More...', '/about'
+            .footer_nav
+              %p.sm-mb0
+                %strong
+                  = link_to "Privacy Policy", "/privacy"
+                  %br
+                %strong
+                  = link_to " Terms & Conditions", "/terms"
+              %p
+                &copy;2020 GoXperia
+          .social-links
+            = link_to image_tag('icons/instagram.svg'), "https://www.instagram.com/goxperia/"
+            = link_to image_tag('icons/twitter.svg'), "https://twitter.com/GoXperia1"
+            -# = link_to image_tag('icons/facebook.svg'), "http:///www.facebook.com"

@@ -1,0 +1,32 @@
+.table-wrap {
+  margin: 0 -1rem;
+}
+table {
+  border-collapse: collapse;
+  font-family: $font-family;
+
+  th,td {
+    text-align: left;
+    height: 3.5rem;
+    padding: 0 1rem;
+  }
+  th {
+    color: $gray-dark;
+    background: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+  }
+  td {
+    color: $gray-darker;
+    font-weight: 700;
+    font-size: 1.4rem;
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+  tr:hover {
+    background: $gray-lighter;
+  }
+}
