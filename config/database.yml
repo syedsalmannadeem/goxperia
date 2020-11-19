@@ -7,7 +7,7 @@ default: &default
 
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   host: localhost
-  username: rails
+  username: 320ee6509fffd3bb58091ad25ce084e2
   password: root
   
 
@@ -24,4 +24,4 @@ production:
   <<: *default
   database: goxperia_development
   username: salman
-  password: root
+  password: <%= ENV["SECRET_KEY_BASE"] %>
